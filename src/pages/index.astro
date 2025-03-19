@@ -17,8 +17,8 @@ import Layout from "../layouts/Layout.astro";
       <div class="text-2xl">
         I'm currently at <a
           href="https://www.theaccessgroup.com/en-gb/about/"
-          rel="external"
-          class="text-purple-500 underline"
+          rel="external noreferrer"
+          class="text-fuchsia-400 underline"
           target="_blank">The Access Group</a
         >!
         <br />
@@ -31,36 +31,48 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
   <div class="grid grid-cols-1">
-    <div class="col-span-1">
+    <div class="col-span-1 flex align-center justify-center self-center">
       <Technologies />
     </div>
   </div>
-  <div class="grid grid-cols-1">
+  <!-- <div class="grid grid-cols-1">
     <div class="col-span-1 mb-4">
-      <div>
-        Cool <a
-          href="/projects"
-          class="text-purple-500 underline"
-          >projects</a
-        >?
-      </div>
+      <h2 class="text-2xl font-bold">Cool stuff 👨‍💻</h2>
     </div>
-    <!-- 
-    I am not currently open to new opportunities - so hide the route.
+
+    // This area needs content before I expose it
     <div class="col-span-1 mb-4">
       <div>
-        My <a href="/cv" class="text-purple-500 underline">CV</a
+        Personal <a
+          href="/projects"
+          class="text-fuchsia-400 underline"
+          >projects</a
         >
       </div>
-    </div> -->
+    </div>
+  </div> -->
+
+  <div class="grid grid-cols-1">
+    <div class="col-span-1 mb-4">
+      <h2 class="text-2xl font-bold">Want to chat? 👋</h2>
+    </div>
+    
     <div class="col-span-1 mb-4">
       <div>
         Contact <a
-          href="/contact"
-          class="text-purple-500 underline"
-          >me</a
+        href="/contact"
+        class="text-fuchsia-400 underline"
+        >me</a
         >
       </div>
     </div>
+    
+    <!-- I am not currently open to new opportunities - so hide the route. -->
+    <!-- <div class="col-span-1 mb-4">
+      <div>
+        ... or see my <a href="/cv" class="text-fuchsia-400 underline">CV</a
+        >
+      </div>
+    </div> -->
   </div>
 </Layout>

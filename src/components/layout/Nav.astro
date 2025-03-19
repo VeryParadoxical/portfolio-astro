@@ -10,10 +10,10 @@ const navLinks: Array<{
     name: "Home",
     url: "/",
   },
-  {
-    name: "Projects",
-    url: "/projects",
-  },
+  // {
+  //   name: "Projects",
+  //   url: "/projects",
+  // },
   //   I am not currently open to new opportunities - so hide the route.
   //   {
   //     name: "CV",
@@ -31,13 +31,11 @@ const navLinks: Array<{
 >
   <a href="/" class="w-fit text-2xl font-bold"
   >
-  <!-- transition:name="nav-logo" -->
     Adam Milner
   </a>
   <ul
     class="flex flex-row items-center justify-center gap-4 font-semibold md:gap-8 lg:gap-16"
     >
-    <!-- transition:name="nav-links" -->
     {
       navLinks.map((link) => {
         if (link.url.startsWith("/")) {
@@ -52,7 +50,7 @@ const navLinks: Array<{
 
         return (
           <li class="link">
-            <a href={link.url} target={link.target} rel="noopener noreferrer">
+            <a href={link.url} target={link.target} rel="external noreferrer">
               {link.name}
             </a>
           </li>
@@ -60,9 +58,7 @@ const navLinks: Array<{
       })
     }
   </ul>
-  <!-- transition:name="nav-view-source"  -->
-  <ViewSource 
-  class="justify-self-end" />
+  <ViewSource class="justify-self-end" />
 </nav>
 
 <style>
