@@ -1,0 +1,8 @@
+---
+import { getCollection } from "astro:content";
+import ProjectList from "../../components/ProjectList.astro";
+
+const projects = await getCollection("projects");
+---
+
+<ProjectList title="Projects" projects={projects} />

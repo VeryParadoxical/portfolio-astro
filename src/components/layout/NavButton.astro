@@ -1,0 +1,14 @@
+---
+interface Props {
+  text: string;
+  href: string;
+}
+// Individual anchors for each nav item, takes params for the anchor text and href
+const { text, href } = Astro.props;
+---
+
+<template>
+  <a href={href} class="nav-button">
+    {text}
+  </a>
+</template>

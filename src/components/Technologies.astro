@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import react from "./../assets/technologies/react.svg";
+import js from "./../assets/technologies/js.svg";
+import ts from "./../assets/technologies/ts.svg";
+import dotnet from "./../assets/technologies/dotnet.svg";
+import mssql from "./../assets/technologies/mssql.svg";
+import csharp from "./../assets/technologies/csharp.svg";
+import php from "./../assets/technologies/php.svg";
+import cpp from "./../assets/technologies/cpp.svg";
+import azure from "./../assets/technologies/azure.svg";
+
+const technologies = [
+  // Use the same order as the imports
+  {
+    name: "React",
+    img: react,
+  },
+  {
+    name: "JavaScript",
+    img: js,
+  },
+  {
+    name: "TypeScript",
+    img: ts,
+  },
+  {
+    name: ".NET",
+    img: dotnet,
+  },
+  {
+    name: "MS SQL",
+    img: mssql,
+  },
+  {
+    name: "C#",
+    img: csharp,
+  },
+  {
+    name: "PHP",
+    img: php,
+  },
+  {
+    name: "C++",
+    img: cpp,
+  },
+  {
+    name: "Azure",
+    img: azure,
+  },
+];
+---
+
+<div style={{ display: "flex", flexDirection: "row" }}>
+  <div class="logos">
+    <div class="logos-slide">
+      {
+        technologies.map(({ name, img }) => (
+          <Image src={img} alt={name} width={100} />
+        ))
+      }
+    </div>
+    <div class="logos-slide">
+      {
+        technologies.map(({ name, img }) => (
+          <Image src={img} alt={name} width={100} />
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos {
+    overflow: hidden;
+    display: -webkit-inline-box;
+    white-space: nowrap;
+
+    background: black;
+    padding: 20px 0;
+    border-radius: 12px;
+    border: 5px solid purple;
+  }
+
+  .logos-slide {
+    display: flex;
+    animation: 12s slide infinite linear;
+    width: max-content;
+  }
+
+  .logos-slide img {
+    height: 60px;
+    margin: 0 30px;
+  }
+</style>

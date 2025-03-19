@@ -1,0 +1,9 @@
+{
+    "WhiteSource Advise.Diff.BaseBranch": "main",
+    "prettier.documentSelectors": [
+        "**/*.astro"
+    ],
+    "[astro]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

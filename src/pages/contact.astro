@@ -1,0 +1,31 @@
+---
+import Socials from "../components/Socials.astro";
+import Layout from "../layouts/Layout.astro";
+// import { Image } from "astro:assets";
+// import img from "../assets/astro.svg";
+---
+
+<Layout title="Contact">
+  <h1 class="text-6x1 font-bold" style="font-size: 2em;">Hello! 👋</h1>
+  <h2 class="text-2xl font-bold">Want to chat?</h2>
+  <div class="text-2x1">
+    <p>
+      Feel free to reach out to me on any of the platforms below.
+      <br />
+      I'm always happy to chat about software development, games, or anything else
+      you might want to talk about!
+    </p>
+  </div>
+  <div class="flex justify-center gap-4">
+    <Socials />
+  </div>
+  <!-- Images example -->
+  <!-- <Image src={img} alt="Astro Logo" densities={["1x", "2x", "3x"]} />
+  <Image
+    src={img}
+    alt="Astro Logo"
+    widths={[100]}
+    sizes="((min-wdith: 50em) and (max-width: 75em)) 50em"
+  /> -->
+  <!-- You can use `Picture` from astro:assets to create responsive images -->
+</Layout>

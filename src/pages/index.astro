@@ -1,0 +1,68 @@
+---
+import Socials from "../components/Socials.astro";
+import Technologies from "../components/Technologies.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome!">
+  <div
+    class="xs:grid-cols-3 grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4"
+  >
+    <div class="col-span-1 flex flex-col justify-center gap-2">
+      <h1 class="text-4x1 font-bold">Hey, I'm Adam Milner</h1>
+      <h2 class="text-6xl font-bold">Software Engineer</h2>
+      <div class="flex justify-center gap-4">
+        <Socials />
+      </div>
+    </div>
+    <div class="col-span-3 text-left">
+      <div class="text-2xl">
+        I'm currently at <a
+          href="https://www.theaccessgroup.com/en-gb/about/"
+          rel="external"
+          class="text-purple-500 underline"
+          target="_blank">The Access Group</a
+        >!
+        <br />
+        Full stack developer with a focus on the front-end
+        <br />
+        Trained as a games programmer.
+        <br />
+        Moved into SaaS web development - 3 YoE.
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1">
+    <div class="col-span-1">
+      <Technologies />
+    </div>
+  </div>
+  <div class="grid grid-cols-1">
+    <div class="col-span-1 mb-4">
+      <div>
+        Cool <a
+          href="/projects"
+          class="text-purple-500 underline"
+          target="_blank">projects</a
+        >?
+      </div>
+    </div>
+    <!-- 
+    I am not currently open to new opportunities - so hide the route.
+    <div class="col-span-1 mb-4">
+      <div>
+        My <a href="/cv" class="text-purple-500 underline" target="_blank">CV</a
+        >
+      </div>
+    </div> -->
+    <div class="col-span-1 mb-4">
+      <div>
+        Contact <a
+          href="/contact"
+          class="text-purple-500 underline"
+          target="_blank">me</a
+        >
+      </div>
+    </div>
+  </div>
+</Layout>

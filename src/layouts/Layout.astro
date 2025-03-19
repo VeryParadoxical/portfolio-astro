@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+import Nav from "../components/layout/Nav.astro";
+import Footer from "../components/layout/Footer.astro";
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-surface-500 font-mono">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Adam Milner's Portfolio Site" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Adam Milner</title>
+    <ClientRouter />
+  </head>
+  <body
+    class="grid-cols-default-layout grid min-h-screen grid-rows-[auto_auto_1fr_auto] gap-4 p-4 font-mono text-white md:gap-8 md:p-8"
+  >
+    <Nav />
+    <div class="col-span-full"></div>
+    <!-- Generic tailwind v4 centre golden ratio content, center align items, left alight text. -->
+    <main
+      class="prose-headings:m-0 col-span-full grid place-items-center text-center"
+    >
+      <div
+        class="items-left max-w-1xl flex h-full flex-col justify-center gap-8"
+      >
+        <slot />
+      </div>
+    </main>
+
+    <Footer />
+  </body><!-- Stop being on the same line! -->
+  <style is:global>
+    @reference "../styles/global.css";
+
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .prose
+      :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      @apply !bg-surface-600;
+    }
+  </style>
+</html>
