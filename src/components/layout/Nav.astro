@@ -7,6 +7,10 @@ const navLinks: Array<{
   target?: HTMLAnchorElement["target"];
 }> = [
   {
+    name: "Home",
+    url: "/",
+  },
+  {
     name: "Projects",
     url: "/projects",
   },
@@ -25,13 +29,15 @@ const navLinks: Array<{
 <nav
   class="col-span-full grid w-full grid-cols-subgrid max-md:place-items-center"
 >
-  <a href="/" class="w-fit text-2xl font-bold" transition:name="nav-logo">
+  <a href="/" class="w-fit text-2xl font-bold"
+  >
+  <!-- transition:name="nav-logo" -->
     Adam Milner
   </a>
   <ul
     class="flex flex-row items-center justify-center gap-4 font-semibold md:gap-8 lg:gap-16"
-    transition:name="nav-links"
-  >
+    >
+    <!-- transition:name="nav-links" -->
     {
       navLinks.map((link) => {
         if (link.url.startsWith("/")) {
@@ -54,7 +60,9 @@ const navLinks: Array<{
       })
     }
   </ul>
-  <ViewSource transition:name="nav-view-source" class="justify-self-end" />
+  <!-- transition:name="nav-view-source"  -->
+  <ViewSource 
+  class="justify-self-end" />
 </nav>
 
 <style>

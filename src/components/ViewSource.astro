@@ -5,13 +5,11 @@ interface Props {
   class?: string;
 }
 
-const baseGithubUrl = "https://github.com";
-
-const githubUrl = `${baseGithubUrl}/VeryParadoxical`;
+const url = "https://github.com/VeryParadoxical/portfolio-astro";
 ---
 
 <a
-  href={githubUrl}
+  href={url}
   class:list={[
     "flex w-fit flex-row items-center gap-2 hover:underline",
     Astro.props.class,
