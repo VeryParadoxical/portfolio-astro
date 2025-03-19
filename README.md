@@ -1,5 +1,13 @@
 # My portfolio site built using 🚀
 
+This site is intended as both a learning experience, and as a way to get a high performance, accessible, responsive, and SEO-friendly website!
+
+I am open to PRs - though given the nature of the site, it is unlikely I'll accept them without a thorough review.
+
+However, I am very open to any suggestions of how this site may be improved, or general tips for the future.
+
+Astro is pretty cool, but I am definitely on the greener side with it!
+
 ## Commands
 
 All commands are run from the root of the project, from a terminal:
